@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedLib", "..\GettingStarted\GettingStartedLib\GettingStartedLib.csproj", "{6CF8FCC7-36E3-4328-8AA1-4B5AF7058D98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedHost", "GettingStartedHost\GettingStartedHost\GettingStartedHost.csproj", "{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedClient", "..\GettingStartedClient\GettingStartedClient\GettingStartedClient.csproj", "{22F9960E-B5CF-4FAE-A0BC-96E30FD2FA46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedLib", "GettingStarted\GettingStartedLib\GettingStartedLib.csproj", "{6CF8FCC7-36E3-4328-8AA1-4B5AF7058D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedHost", "..\GettingStartedHost\GettingStartedHost\GettingStartedHost.csproj", "{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedClient", "GettingStartedClient\GettingStartedClient\GettingStartedClient.csproj", "{22F9960E-B5CF-4FAE-A0BC-96E30FD2FA46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CF8FCC7-36E3-4328-8AA1-4B5AF7058D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CF8FCC7-36E3-4328-8AA1-4B5AF7058D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF8FCC7-36E3-4328-8AA1-4B5AF7058D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,15 +27,11 @@ Global
 		{22F9960E-B5CF-4FAE-A0BC-96E30FD2FA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F9960E-B5CF-4FAE-A0BC-96E30FD2FA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22F9960E-B5CF-4FAE-A0BC-96E30FD2FA46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{106EEE7A-81C6-4F51-BE4F-CDA30CB3A567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7AF9DCF4-AAC0-42EA-9635-E4471D0D1D78}
+		SolutionGuid = {BFF5C1D6-CCC9-4845-96D9-ADAC333BDC87}
 	EndGlobalSection
 EndGlobal
