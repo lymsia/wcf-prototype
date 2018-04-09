@@ -1,4 +1,5 @@
 ﻿using GettingStartedLib;
+using MySql.Data.MySqlClient;
 using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
@@ -29,7 +30,6 @@ namespace GettingStartedHost
                 selfHost.Open();
                 Console.WriteLine("The service is ready.");
                 Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
                 Console.ReadLine();
 
                 // Close the ServiceHostBase to shutdown the service.  

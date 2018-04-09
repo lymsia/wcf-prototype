@@ -1,24 +1,56 @@
 ﻿using Dapper;
+using GettingStartedLib.Class;
 using MySql.Data.MySqlClient;
+using System.Data;
 using System.Linq;
 
 namespace GettingStartedLib
 {
     public class Service : MyService
     {
-        public int List(string name)
+        public user List(string email)
         {
+            /*
+            // MySQLを接続する
+            string myConnectionString = "server=192.168.1.60;Port=3306;database=magellan;uid=root;pwd=root;";
+            MySqlConnection cnn;
+            cnn = new MySqlConnection(myConnectionString);
+            cnn.Open();
+            Console.WriteLine("データベース接続が成功しました");
+
+            MySqlCommand cmd = new MySqlCommand("select * from user;", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine(reader.GetString(3));
+            }
+            cnn.Close();
+            */
+
+            /*
             MySqlConnection db;
 
             // Connect to DB
-            db = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
+            //db = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString);
+            db = new MySqlConnection("server=192.168.1.60;Port=3306;database=magellan;uid=root;pwd=root;");
             db.Open();
 
-            var result = db.Query("SELECT COUNT(*) FROM m_user WHERE name like '%" + name + "%'");
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM user", db);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string result = "";
+            while(reader.Read())
+            {
+                result = reader.GetString(3);
+            }
 
             db.Close();
+            */
 
-            return result.First();
+            IDbConnection db = new MySqlConnection("server=192.168.1.60;Port=3306;database=magellan;uid=root;pwd=root;");
+
+            return db.Query<user>("Select * From user " +
+                "WHERE email = @email", new { email }).SingleOrDefault();
         }
 
         public bool Add(string name, string password)

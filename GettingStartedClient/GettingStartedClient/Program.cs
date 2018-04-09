@@ -14,10 +14,10 @@ namespace GettingStartedClient
 
             // Step 2: Call the service operations.  
             // Call the Add service operation.  
-            string value1 = "test";
-            int result = client.List(value1);
+            string value1 = "roy_wijaya@xica.net";
+            user result = client.List(value1);
             Console.WriteLine("step 2");
-            Console.WriteLine("List({0})", value1);
+            Console.WriteLine("List({0})", result.email);
 
             /*
             // Call the Subtract service operation.  
@@ -38,7 +38,8 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
             */
-            Console.ReadKey();
+
+            Console.ReadLine();
 
             //Step 3: Closing the client gracefully closes the connection and cleans up resources.  
             client.Close();

@@ -1,4 +1,5 @@
-﻿using GettingStartedLib.Model;
+﻿using GettingStartedLib.Class;
+using GettingStartedLib.Model;
 using System.Collections.Generic;
 using System.ServiceModel;
 
@@ -8,7 +9,7 @@ namespace GettingStartedLib
     public interface MyService
     {
         [OperationContract]
-        int List(string name);
+        user List(string email);
         [OperationContract]
         bool Add(string name, string password);
         [OperationContract]
